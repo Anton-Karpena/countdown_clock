@@ -1,4 +1,4 @@
-Countdown Timer
+Countdown Clock
 
 - [Demo link](https://Anton-Karpena.github.io/countdown_clock/)
 

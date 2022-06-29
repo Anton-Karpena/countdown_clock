@@ -4,6 +4,8 @@ body {
   align-items: center;
   background-image: url(./image/701802.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgb(180, 208, 232);
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -14,10 +16,18 @@ body {
   border-radius: 10px;
   background-color: aliceblue;
 
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+
   &__header {
     color: #000;
     font-weight: 100;
     font-size: 40px;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
   }
 
   &__block {
@@ -27,6 +37,12 @@ body {
     border-radius: 6px;
     background: snow;
     font-size: 32px;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+      margin: 4px;
+      padding: 8px;
+    }
   }
 
   &__span {
@@ -35,10 +51,20 @@ body {
     padding: 16px;
     border-radius: 4px;
     background: rgb(227, 244, 242);
+
+    @media (max-width: 768px) {
+      width: 24px;
+      padding: 12px;
+    }
   }
 
   &__text {
     padding-top: 12px;
     font-size: 16px;
+
+    @media (max-width: 768px) {
+      padding-top: 8px;
+      font-size: 12px;
+    }
   }
 }

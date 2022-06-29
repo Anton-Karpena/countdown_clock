@@ -1,10 +1,10 @@
 body {
-  background-image: url(./image/701802.jpg);
-  background-size: cover;
-  font-family: 'Josefin Sans', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(./image/701802.jpg);
+  background-size: cover;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .clock {
@@ -21,23 +21,24 @@ body {
   }
 
   &__block {
+    display: inline-block;
     margin: 8px;
     padding: 12px;
-    border-radius: 5px;
+    border-radius: 6px;
     background: snow;
-    display: inline-block;
-    font-size: 30px;
+    font-size: 32px;
   }
 
   &__span {
+    display: inline-block;
+    width: 36px;
     padding: 16px;
     border-radius: 4px;
     background: rgb(227, 244, 242);
-    display: inline-block;
   }
 
   &__text {
-    padding-top: 10px;
+    padding-top: 12px;
     font-size: 16px;
   }
 }

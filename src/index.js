@@ -16,10 +16,10 @@ function getTimeRemaining(endtime) {
 
 function initializeClock(id, endtime) {
   const clock = document.getElementById(id);
-  const daysSpan = clock.querySelector('.days');
-  const hoursSpan = clock.querySelector('.hours');
-  const minutesSpan = clock.querySelector('.minutes');
-  const secondsSpan = clock.querySelector('.seconds');
+  const daysSpan = clock.querySelector('.clock--days');
+  const hoursSpan = clock.querySelector('.clock--hours');
+  const minutesSpan = clock.querySelector('.clock--minutes');
+  const secondsSpan = clock.querySelector('.clock--seconds');
 
   function updateClock() {
     const t = getTimeRemaining(endtime);
@@ -39,4 +39,4 @@ function initializeClock(id, endtime) {
 }
 
 const deadline = new Date(Date.parse(new Date()) + 20 * 24 * 60 * 60 * 1000);
-initializeClock('clockdiv', deadline);
+initializeClock('clock__timer', deadline);

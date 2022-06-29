@@ -1,41 +1,43 @@
-body{
+body {
+  background-image: url(./image/701802.jpg);
+  background-size: cover;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
   text-align: center;
-  background: #00ECB9;
-  font-family: sans-serif;
-  font-weight: 100;
-}
+  margin-top: 10vh;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: aliceblue;
 
-h1{
-  color: #396;
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
-}
+  &__header {
+    color: #000;
+    font-weight: 100;
+    font-size: 40px;
+  }
 
-#clockdiv{
-  font-family: sans-serif;
-  color: #fff;
-  display: inline-block;
-  font-weight: 100;
-  text-align: center;
-  font-size: 30px;
-}
+  &__block {
+    margin: 8px;
+    padding: 12px;
+    border-radius: 5px;
+    background: snow;
+    display: inline-block;
+    font-size: 30px;
+  }
 
-#clockdiv > div{
-  padding: 10px;
-  border-radius: 3px;
-  background: #00BF96;
-  display: inline-block;
-}
+  &__span {
+    padding: 16px;
+    border-radius: 4px;
+    background: rgb(227, 244, 242);
+    display: inline-block;
+  }
 
-#clockdiv div > span{
-  padding: 15px;
-  border-radius: 3px;
-  background: #00816A;
-  display: inline-block;
-}
-
-.smalltext{
-  padding-top: 5px;
-  font-size: 16px;
+  &__text {
+    padding-top: 10px;
+    font-size: 16px;
+  }
 }

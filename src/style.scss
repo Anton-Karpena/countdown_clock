@@ -7,14 +7,18 @@ body {
   background-repeat: no-repeat;
   background-color: rgb(180, 208, 232);
   font-family: 'Josefin Sans', sans-serif;
+
+  @media (max-width: 768px) {
+    background-position: center;
+  }
 }
 
 .clock {
-  text-align: center;
   margin-top: 10vh;
   padding: 20px;
   border-radius: 10px;
   background-color: aliceblue;
+  text-align: center;
 
   @media (max-width: 768px) {
     padding: 10px;
@@ -28,43 +32,63 @@ body {
     @media (max-width: 768px) {
       font-size: 28px;
     }
+
+    @media (max-width: 420px) {
+      font-size: 20px;
+    }
+  }
+
+  &__timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 420px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
   }
 
   &__block {
-    display: inline-block;
     margin: 8px;
     padding: 12px;
     border-radius: 6px;
     background: snow;
-    font-size: 32px;
 
     @media (max-width: 768px) {
-      font-size: 24px;
       margin: 4px;
       padding: 8px;
     }
   }
 
-  &__span {
-    display: inline-block;
+  &__div {
     width: 36px;
     padding: 16px;
     border-radius: 4px;
     background: rgb(227, 244, 242);
+    font-size: 28px;
 
     @media (max-width: 768px) {
       width: 24px;
       padding: 12px;
+      font-size: 24px;
     }
   }
 
   &__text {
-    padding-top: 12px;
+    padding: 12px 0 8px;
+    margin: 0;
     font-size: 16px;
 
     @media (max-width: 768px) {
       padding-top: 8px;
       font-size: 12px;
+    }
+
+    @media (max-width: 420px) {
+      padding: 8px 0 0;
     }
   }
 }

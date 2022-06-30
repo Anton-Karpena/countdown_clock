@@ -16,18 +16,18 @@ function getTimeRemaining(endtime) {
 
 function initializeClock(id, endtime) {
   const clock = document.getElementById(id);
-  const daysSpan = clock.querySelector('.clock--days');
-  const hoursSpan = clock.querySelector('.clock--hours');
-  const minutesSpan = clock.querySelector('.clock--minutes');
-  const secondsSpan = clock.querySelector('.clock--seconds');
+  const daysDiv = clock.querySelector('.clock--days');
+  const hoursDiv = clock.querySelector('.clock--hours');
+  const minutesDiv = clock.querySelector('.clock--minutes');
+  const secondsDiv = clock.querySelector('.clock--seconds');
 
   function updateClock() {
     const t = getTimeRemaining(endtime);
 
-    daysSpan.innerHTML = t.days;
-    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+    daysDiv.innerHTML = t.days;
+    hoursDiv.innerHTML = ('0' + t.hours).slice(-2);
+    minutesDiv.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsDiv.innerHTML = ('0' + t.seconds).slice(-2);
 
     if (t.total <= 0) {
       clearInterval(timeinterval);

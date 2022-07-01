@@ -1,6 +1,7 @@
 Countdown Clock
 
-Pick a calendar date and start the timer, that'll show how long do you need to wait
+Pick a calendar date and start the timer.
+Timer doesn't accept dates from the past.
 
 - [Demo link](https://Anton-Karpena.github.io/countdown_clock/)
 

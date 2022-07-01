@@ -10,7 +10,7 @@ body {
   background-image: url(./image/701802.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgb(180, 208, 232);
+  background-color: #b4d0e8;
 
   @media (max-width: 768px) {
     background-position: center;
@@ -21,7 +21,7 @@ body {
   margin-top: 10vh;
   padding: 20px;
   border-radius: 8px;
-  background-color: aliceblue;
+  background-color: #f0f8ff;
   text-align: center;
 
   @media (max-width: 768px) {
@@ -59,7 +59,7 @@ body {
     margin: 8px;
     padding: 12px;
     border-radius: 8px;
-    background: snow;
+    background: #fffafa;
 
     @media (max-width: 768px) {
       margin: 4px;
@@ -71,7 +71,7 @@ body {
     width: 36px;
     padding: 16px;
     border-radius: 4px;
-    background-color: rgb(227, 244, 242);
+    background-color: #e3f4f2;
     font-size: 28px;
 
     @media (max-width: 768px) {
@@ -103,59 +103,94 @@ body {
   align-items: stretch;
   padding: 20px;
   margin: 20px;
-  background-color: aliceblue;
+  background-color: #f0f8ff;
   border-radius: 8px;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+
+  @media (max-width: 420px) {
+    display: grid;
+    justify-items: center;
+    padding: 20px;
+  }
 
   &__calendar {
 
     &-label {
-      background-color: snow;
+      background-color: #fffafa;
       padding: 12px;
       border-radius: 8px 0 0 8px;
+
+      @media (max-width: 768px) {
+        padding: 8px;
+      }
+
+      @media (max-width: 420px) {
+        margin-bottom: 10px;
+        border-radius: 8px;
+      }
     }
 
     &-input {
-      background-color: rgb(227, 244, 242);
+      background-color: #e3f4f2;
       border: 0;
       border-radius: 8px;
       padding: 12px;
+
+      @media (max-width:768px) {
+        padding: 8px;
+      }
     }
 
     &-input:hover {
-      background-color: rgb(163, 204, 200);
+      background-color: #a3ccc8;
       transition: 0.2s;
       cursor: pointer;
     }
 
     &-input:focus {
       outline: none;
-      background-color: rgb(163, 204, 200);;
+      background-color: #a3ccc8;;
     }
   }
 
   &__button {
     
     &-label {
-      background-color: snow;
+      background-color: #fffafa;
       padding: 12px;
       border-radius: 0 8px 8px 0;
+
+      @media (max-width: 768px) {
+        padding: 8px; 
+      }
+
+      @media (max-width: 420px) {
+        border-radius: 8px;
+      }
     }
     
     &-input {
-      background-color: rgb(227, 244, 242);
+      background-color: #e3f4f2;
       border: 0;
       border-radius: 8px;
       padding: 14px;
+
+      @media (max-width:768px) {
+       padding: 10px; 
+      }
     }
 
     &-input:hover {
-      background-color: rgb(163, 204, 200);
+      background-color: #a3ccc8;
       transition: 0.2s;
       cursor: pointer;
     }
 
     &-input:focus {
-      background-color: rgb(163, 204, 200);
+      background-color: #a3ccc8;
     }
   }
 }

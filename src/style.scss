@@ -1,12 +1,16 @@
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-image: url(./image/701802.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgb(180, 208, 232);
-  font-family: 'Josefin Sans', sans-serif;
 
   @media (max-width: 768px) {
     background-position: center;
@@ -16,7 +20,7 @@ body {
 .clock {
   margin-top: 10vh;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: aliceblue;
   text-align: center;
 
@@ -54,7 +58,7 @@ body {
   &__block {
     margin: 8px;
     padding: 12px;
-    border-radius: 6px;
+    border-radius: 8px;
     background: snow;
 
     @media (max-width: 768px) {
@@ -67,7 +71,7 @@ body {
     width: 36px;
     padding: 16px;
     border-radius: 4px;
-    background: rgb(227, 244, 242);
+    background-color: rgb(227, 244, 242);
     font-size: 28px;
 
     @media (max-width: 768px) {
@@ -89,6 +93,69 @@ body {
 
     @media (max-width: 420px) {
       padding: 8px 0 0;
+    }
+  }
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 20px;
+  margin: 20px;
+  background-color: aliceblue;
+  border-radius: 8px;
+
+  &__calendar {
+
+    &-label {
+      background-color: snow;
+      padding: 12px;
+      border-radius: 8px 0 0 8px;
+    }
+
+    &-input {
+      background-color: rgb(227, 244, 242);
+      border: 0;
+      border-radius: 8px;
+      padding: 12px;
+    }
+
+    &-input:hover {
+      background-color: rgb(163, 204, 200);
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    &-input:focus {
+      outline: none;
+      background-color: rgb(163, 204, 200);;
+    }
+  }
+
+  &__button {
+    
+    &-label {
+      background-color: snow;
+      padding: 12px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    &-input {
+      background-color: rgb(227, 244, 242);
+      border: 0;
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    &-input:hover {
+      background-color: rgb(163, 204, 200);
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    &-input:focus {
+      background-color: rgb(163, 204, 200);
     }
   }
 }

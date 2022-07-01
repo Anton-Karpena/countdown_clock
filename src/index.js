@@ -1,42 +1,33 @@
-function getTimeRemaining(endtime) {
-  const total = Date.parse(endtime) - Date.parse(new Date());
-  const seconds = Math.floor((total / 1000) % 60);
-  const minutes = Math.floor((total / 1000 / 60) % 60);
-  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-  const days = Math.floor(total / (1000 * 60 * 60 * 24));
+const calendar = document.getElementById('date');
+const button = document.getElementById('button');
+let countDate = null;
+
+calendar.addEventListener('input', (event) => {
+  const result = new Date(event.target.value).getTime();
+  countDate = result;
+  countdown();
+})
+
+button.addEventListener('click', () => {
+  setInterval(countdown, 1000);
+})
+
+const countdown = () => {
+  const now = new Date().getTime();
+  const gap = countDate - now;
+
+  const second = 1000;
+  const minute = second * 60;
+  const hour = minute * 60;
+  const day = hour * 24;
+
+  const textDay = Math.floor(gap / day);
+  const textHour = Math.floor((gap % day) / hour);
+  const textMinute = Math.floor((gap % hour) / minute);
+  const textSecond = Math.floor((gap % minute) / second);
   
-  return {
-    total,
-    days,
-    hours,
-    minutes,
-    seconds
-  };
+  document.querySelector('.clock--days').innerText = textDay;
+  document.querySelector('.clock--hours').innerText = textHour;
+  document.querySelector('.clock--minutes').innerText = textMinute;
+  document.querySelector('.clock--seconds').innerText = textSecond;
 }
-
-function initializeClock(id, endtime) {
-  const clock = document.getElementById(id);
-  const daysDiv = clock.querySelector('.clock--days');
-  const hoursDiv = clock.querySelector('.clock--hours');
-  const minutesDiv = clock.querySelector('.clock--minutes');
-  const secondsDiv = clock.querySelector('.clock--seconds');
-
-  function updateClock() {
-    const t = getTimeRemaining(endtime);
-
-    daysDiv.innerHTML = t.days;
-    hoursDiv.innerHTML = ('0' + t.hours).slice(-2);
-    minutesDiv.innerHTML = ('0' + t.minutes).slice(-2);
-    secondsDiv.innerHTML = ('0' + t.seconds).slice(-2);
-
-    if (t.total <= 0) {
-      clearInterval(timeinterval);
-    }
-  }
-
-  updateClock();
-  const timeinterval = setInterval(updateClock, 1000);
-}
-
-const deadline = new Date(Date.parse(new Date()) + 20 * 24 * 60 * 60 * 1000);
-initializeClock('clock__timer', deadline);
